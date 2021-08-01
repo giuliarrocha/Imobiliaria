@@ -43,7 +43,7 @@
         </div>
         <div class="col" style="background-color: #DFDFC9;">
           <h1 class="h2 text-center" style="font-family: 'Playfair Display SC', serif; color: #A55C55; margin-left: 20px; margin-top: 35px; margin-bottom: 35px;">
-              Editar imóvel
+              Visualizar imóvel
           </h1>
   
           <div class="card text-center">
@@ -53,7 +53,7 @@
                   <label for="inputTipo" class="col-sm-1 col-form-label">Tipo:</label>
                   <div class="col-sm">
                       <div class="input-group col-sm-6">
-                          <select class="col-sm-6 form-select" id="inputTipo">
+                          <select class="col-sm-6 form-select" id="inputTipo" disabled readonly>
                           <option selected="1">Casa Residencial</option>
                           <option value="2">Kitnet</option>
                           <option value="3">Apartamento</option>
@@ -74,7 +74,7 @@
                   </div>
                   <label for="inputAlugado" class="col-sm-2 col-form-label text-end" >Alugado:</label>
                   <div class="input-group col-sm-3 w-25">
-                    <select class="col-sm-3 form-select" id="inputAlugado">
+                    <select class="col-sm-3 form-select" id="inputAlugado" disabled readonly>
                     <option selected="1">Sim</option>
                     <option value="2">Não</option>
                     </select>
@@ -84,33 +84,33 @@
                 <div class="mb-3 row" style="margin-top: 20px;">
                   <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
                   <div class="col-sm-3">   
-                    <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Rua Flores">
+                    <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Rua Flores" disabled readonly>
                   </div>
                   <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
                   <div class="col">   
-                    <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="12">
+                    <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="12" disabled readonly>
                   </div>
                   <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
                   <div class="col-sm-3">   
-                    <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Jardim Tulipas">
+                    <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Jardim Tulipas" disabled readonly>
                   </div>
                 </div>
 
               <div class="mb-3 row">
                   <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
                   <div class="col">   
-                    <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="12345-678">
+                    <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="12345-678" disabled readonly>
                   </div>
                   <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
                   <div class="col-sm-6">   
-                    <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Sorocaba-SP">
+                    <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Sorocaba-SP" disabled readonly>
                   </div>
               </div>
 
               <div class="mb-3 row">
                 <label for="inputTamanho" class="col-2 col-form-label text-start">Tamanho:</label>
                 <div class="col">   
-                  <input type="tam" class="col-sm-1 form-control" id="inputTamanho" placeholder="400 m²">
+                  <input type="tam" class="col-sm-1 form-control" id="inputTamanho" placeholder="400 m²" disabled readonly>
                 </div>
               </div>
               
@@ -129,14 +129,6 @@
                                 <td>145.369.845-99</td>
                                 <td>
                                     <div class="row">
-                                      <div class="col" >
-                                        <a href="" style="color: #A55C55;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                            </svg>
-                                        </a>
-                                    </div>
                                         <div class="col">
                                             <a href="pagina_imovel.html" style="color: #A55C55;">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -170,14 +162,6 @@
                                 <td>035781</td>
                                 <td>
                                     <div class="row">
-                                      <div class="col" >
-                                        <a href="" style="color: #A55C55;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                            </svg>
-                                        </a>
-                                    </div>
                                         <div class="col">
                                             <a href="" style="color: #A55C55;">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -208,14 +192,6 @@
                                 <td>875.365.875-91</td>
                                 <td>
                                     <div class="row">
-                                      <div class="col" >
-                                        <a href="" style="color: #A55C55;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                            </svg>
-                                        </a>
-                                    </div>
                                         <div class="col">
                                             <a href="" style="color: #A55C55;">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -231,7 +207,7 @@
                     </table>
                 </div>
               </div>
-              <a class="btn text-white" style="background-color: #A55C55;" href="corretores.html" role="button">Salvar alterações</a>
+              <a class="btn text-white" style="background-color: #A55C55;" href="corretores.html" role="button">Voltar</a>
 
       </div>
 
