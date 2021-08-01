@@ -46,104 +46,106 @@
               Cadastro de novo proprietário
           </h1>
   
+          <form action="back-end/add_proprietario.php" method="post">
           <div class="card text-center">
               <div class="card-body">
 
                 <div class="mb-3 row">
                   <label for="inputNome" class="col-sm-1 col-form-label">Nome:</label>
                   <div class="col">   
-                    <input type="nome" class="col-sm-1 form-control" id="inputNome" placeholder="Digite o nome completo">
-                  </div>
+                        <input type="nome" class="col-sm-1 form-control" name="inputNome" id="inputNome" placeholder="Digite o nome completo">
+                    </div>
                 </div>
 
               <div class="mb-3 row">
                   <label for="inputCPF" class="col-sm-1 col-form-label">CPF:</label>
                   <div class="col">
-                    <input type="CPF" class="form-control" id="inputCPF" placeholder="Digite o CPF">
-                  </div>
+                    <input type="CPF" class="form-control" id="inputCPF" name="inputCPF" placeholder="Digite o CPF">
+                </div>
               </div>
 
 
-              <div class="row">
-                  <label for="inputSexo" class="col-sm-1 col-form-label">Sexo:</label>
-                  <div class="col-sm-2">
-                      <div class="input-group col-sm-6">
-                          <select class="col-sm-6 form-select" id="inputSexo">
-                          <option selected>Escolha...</option>
-                          <option value="1">M</option>
-                          <option value="2">F</option>
-                          </select>
-                      </div>
-                  </div>
+                    <div class="row">
+                    <label for="inputSexo" class="col-sm-1 col-form-label">Sexo:</label>
+                    <div class="col-sm-2">
+                        <div class="input-group col-sm-6">
+                            <select class="col-sm-6 form-select" id="inputSexo" name="inputSexo">
+                            <option value="M" selected>Escolha...</option>
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            </select>
+                        </div>
+                    </div>
                   
                   <label for="inputDataNasc" class="col-3 col-form-label text-center ">Data de nascimento:</label>
                   <div class="col text-start w-100">
-                    <input type="dataNasc" class="form-control" id="inputDataNasc" placeholder="00/00/0000">
+                    <input type="dataNasc" class="form-control" id="inputDataNasc" name="inputDataNasc" placeholder="00/00/0000">
                   </div>
               </div>
 
               <div class="mb-3 row" style="margin-top: 20px;">
-                  <label for="inputEmail" class="col-sm-1 col-form-label">Email:</label>
-                  <div class="col-4">   
-                    <input type="email" class="col-sm-1 form-control" id="inputEmail" placeholder="exemplo@gmail.com">
-                  </div>
+                <label for="inputEmail" class="col-sm-1 col-form-label">Email:</label>
+                <div class="col-4">
+                    <input type="email" class="col-sm-1 form-control" id="inputEmail" name="inputEmail" placeholder="exemplo@gmail.com">
+                </div>
 
-                  <label for="inputTelefone1" class="col-sm col-form-label">Telefone 1:</label>
-                  <div class="col-sm">   
-                    <input type="telefone1" class="col-sm-1 form-control" id="inputTelefone1" placeholder="Insira o numero de telefone">
-                  </div>
-                  <label for="inputTelefone2" class="col-sm col-form-label">Telefone 2:</label>
-                  <div class="col-sm w-100">   
-                    <input type="telefone2" class="col-sm-1 form-control" id="inputTelefone2" placeholder="Insira o numero de telefone">
-                  </div>
+                <label for="inputTelefone1" class="col-sm col-form-label">Telefone 1:</label>
+                <div class="col-sm">   
+                    <input type="telefone1" class="col-sm-1 form-control" id="inputTelefone1" name="inputTelefone1" placeholder="Insira o numero de telefone">
+                </div>
+                <label for="inputTelefone2" class="col-sm col-form-label">Telefone 2:</label>
+                <div class="col-sm w-100">   
+                    <input type="telefone2" class="col-sm-1 form-control" id="inputTelefone2" name="inputTelefone2" placeholder="Insira o numero de telefone">
+                </div>
                 </div>
 
                 <div class="mb-3 row">
-                  <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
-                  <div class="col-sm-3">   
-                    <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Digite o nome da rua">
-                  </div>
-                  <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
-                  <div class="col">   
-                    <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="Digite o número da rua">
-                  </div>
-                  <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
-                  <div class="col-sm-3">   
-                    <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Digite o nome do bairro">
-                  </div>
+                <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
+                <div class="col-sm-3">   
+                    <input type="rua" class="col-sm-1 form-control" id="inputRua" name="inputRua" placeholder="Digite o nome da rua">
+                </div>
+                <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
+                <div class="col">   
+                    <input type="numero" class="col-sm-1 form-control" id="inputNum" name="inputNum" placeholder="Digite somente o número">
+                </div>
+                <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
+                <div class="col-sm-3">   
+                    <input type="bairro" class="col-sm-1 form-control" id="inputBairro" name="inputBairro" placeholder="Digite o nome do bairro">
+                </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
+                    <div class="col">   
+                        <input type="CEP" class="col-sm-1 form-control" id="inputCEP" name="inputCEP" placeholder="Insira somente os números, válido: 12345678">
+                    </div>
+                    <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
+                    <div class="col-sm-6">   
+                        <input type="cidade" class="col-sm-1 form-control" id="inputCidade" name="inputCidade" placeholder="Digite o nome da cidade">
+                    </div>
                 </div>
 
               <div class="mb-3 row">
-                  <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
-                  <div class="col">   
-                    <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="Insira CEP válido: 12345-678">
-                  </div>
-                  <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
-                  <div class="col-sm-6">   
-                    <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Digite o nome da cidade">
-                  </div>
-              </div>
-
-            <div class="mb-3 row">
               <label for="inputConta" class="col-sm-1 col-form-label">Conta:</label>
               <div class="col-2">   
-                <input type="conta" class="col form-control" id="inputConta" placeholder="Digite o número da conta">
+                <input type="conta" class="col form-control" id="inputConta" name="inputConta"placeholder="Digite o número da conta">
               </div>
               <label for="inputAgencia" class="col-2 col-form-label text-center">Agência:</label>
               <div class="col-sm-3">   
-                <input type="agencia" class="col-sm-1 form-control" id="inputAgencia" placeholder="Digite o nome da agência">
+                <input type="agencia" class="col-sm-1 form-control" name="inputAgencia" id="inputAgencia" placeholder="Digite o nome da agência">
               </div>
               <label for="inputBanco" class="col-sm-1 col-form-label">Banco:</label>
               <div class="col-sm-3">   
-                <input type="banco" class="col-sm-1 form-control" id="inputBanco" placeholder="Digite o nome do banco">
+                <input type="banco" class="col-sm-1 form-control" name="inputBanco" id="inputBanco" placeholder="Digite o nome do banco">
               </div>
             </div>
                     
-                <a class="btn text-white" style="background-color: #A55C55;" href="corretores.html" role="button">Confirmar</a>
+                 
+            <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
-              </div>
           </div>
-          
+            </div>
+            </form>
       </div>
 
       </div>

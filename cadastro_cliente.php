@@ -46,20 +46,21 @@
               Cadastro de novo cliente
           </h1>
   
+          <form action="back-end/add_cliente.php" method="post">
           <div class="card text-center">
               <div class="card-body">
 
                     <div class="mb-3 row">
                         <label for="inputNome" class="col-sm-1 col-form-label">Nome:</label>
                         <div class="col">   
-                          <input type="nome" class="col-sm-1 form-control" id="inputNome" placeholder="Digite o nome completo">
+                          <input type="nome" class="col-sm-1 form-control" name="inputNome" id="inputNome" placeholder="Digite o nome completo">
                         </div>
                       </div>
 
                     <div class="mb-3 row">
                         <label for="inputCPF" class="col-sm-1 col-form-label">CPF:</label>
                         <div class="col">
-                          <input type="CPF" class="form-control" id="inputCPF" placeholder="Digite o CPF">
+                          <input type="CPF" class="form-control" id="inputCPF" name="inputCPF" placeholder="Digite o CPF">
                         </div>
                     </div>
 
@@ -68,10 +69,10 @@
                         <label for="inputSexo" class="col-sm-1 col-form-label">Sexo:</label>
                         <div class="col-sm-2">
                             <div class="input-group col-sm-6">
-                                <select class="col-sm-6 form-select" id="inputSexo">
-                                <option selected>Escolha...</option>
-                                <option value="1">M</option>
-                                <option value="2">F</option>
+                                <select class="col-sm-6 form-select" id="inputSexo" name="inputSexo">
+                                <option value="M" selected>Escolha...</option>
+                                <option value="M">M</option>
+                                <option value="F">F</option>
                                 </select>
                             </div>
                         </div>
@@ -79,35 +80,35 @@
                         <label class="col-sm col-form-label" for="inputEstadoCivil">Estado civil:</label>
                         <div class="col-sm-2">
                             <div class="input-group col-sm-6">
-                                <select class="col-sm-6 form-select" id="inputEstadoCivil">
-                                <option selected>Escolha...</option>
-                                <option value="1">Solteiro(a)</option>
-                                <option value="2">Casado(a)</option>
-                                <option value="2">Viúvo(a)</option>
-                                <option value="2">Divorciado(a)</option>
+                                <select class="col-sm-6 form-select" id="inputEstadoCivil" name="inputEstadoCivil">
+                                <option value="Solteiro(a)" selected>Escolha...</option>
+                                <option value="Solteiro(a)">Solteiro(a)</option>
+                                <option value="Casado(a)">Casado(a)</option>
+                                <option value="Viúvo(a)">Viúvo(a)</option>
+                                <option value="Divorciado(a)">Divorciado(a)</option>
                                 </select>
                             </div>
                         </div>
                         
                         <label for="inputDataNasc" class="col col-form-label text-start">Data de nascimento:</label>
                         <div class="col text-start w-100">
-                          <input type="dataNasc" class="form-control" id="inputDataNasc" placeholder="00/00/0000">
+                          <input type="dataNasc" class="form-control" id="inputDataNasc" name="inputDataNasc" placeholder="00/00/0000">
                         </div>
                     </div>
 
                     <div class="mb-3 row" style="margin-top: 20px;">
                         <label for="inputEmail" class="col-sm-1 col-form-label">Email:</label>
-                        <div class="col-4">   
-                          <input type="email" class="col-sm-1 form-control" id="inputEmail" placeholder="exemplo@gmail.com">
+                        <div class="col-4">
+                          <input type="email" class="col-sm-1 form-control" id="inputEmail" name="inputEmail" placeholder="exemplo@gmail.com">
                         </div>
 
                         <label for="inputTelefone1" class="col-sm col-form-label">Telefone 1:</label>
                         <div class="col-sm">   
-                          <input type="telefone1" class="col-sm-1 form-control" id="inputTelefone1" placeholder="Insira o numero de telefone">
+                          <input type="telefone1" class="col-sm-1 form-control" id="inputTelefone1" name="inputTelefone1" placeholder="Insira o numero de telefone">
                         </div>
                         <label for="inputTelefone2" class="col-sm col-form-label">Telefone 2:</label>
                         <div class="col-sm w-100">   
-                          <input type="telefone2" class="col-sm-1 form-control" id="inputTelefone2" placeholder="Insira o numero de telefone">
+                          <input type="telefone2" class="col-sm-1 form-control" id="inputTelefone2" name="inputTelefone2" placeholder="Insira o numero de telefone">
                         </div>
                       </div>
 
@@ -115,15 +116,15 @@
                     <div class="mb-3 row">
                         <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
                         <div class="col-sm-3">   
-                          <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Digite o nome da rua">
+                          <input type="rua" class="col-sm-1 form-control" id="inputRua" name="inputRua" placeholder="Digite o nome da rua">
                         </div>
                         <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
                         <div class="col">   
-                          <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="Digite o número da rua">
+                          <input type="numero" class="col-sm-1 form-control" id="inputNum" name="inputNum" placeholder="Digite somente o número">
                         </div>
                         <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
                         <div class="col-sm-3">   
-                          <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Digite o nome do bairro">
+                          <input type="bairro" class="col-sm-1 form-control" id="inputBairro" name="inputBairro" placeholder="Digite o nome do bairro">
                         </div>
                       </div>
 
@@ -132,29 +133,30 @@
                     <div class="mb-3 row">
                         <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
                         <div class="col">   
-                          <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="Insira CEP válido: 12345-678">
+                          <input type="CEP" class="col-sm-1 form-control" id="inputCEP" name="inputCEP" placeholder="Insira somente os números, válido: 12345678">
                         </div>
                         <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
                         <div class="col-sm-6">   
-                          <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Digite o nome da cidade">
+                          <input type="cidade" class="col-sm-1 form-control" id="inputCidade" name="inputCidade" placeholder="Digite o nome da cidade">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                       <label for="inputsalario" class="col-sm-1 col-form-label">Salário:</label>
                       <div class="col">   
-                        <input type="salario" class="col-sm-1 form-control" id="inputsalario" placeholder="Exemplo: 1253,22">
+                        <input type="salario" class="col-sm-1 form-control" id="inputsalario" name="inputsalario" placeholder="Exemplo: 1253,22">
                       </div>
                       <label for="inputprofissao" class="col-2 col-form-label">Profissão:</label>
                       <div class="col-sm-6">   
-                        <input type="profissao" class="col-sm-1 form-control" id="inputprofissao" placeholder="Digite a profissão">
+                        <input type="profissao" class="col-sm-1 form-control" id="inputprofissao" name="inputprofissao" placeholder="Digite a profissão">
                       </div>
                   </div>
                     
-                    <a class="btn text-white" style="background-color: #A55C55;" href="clientes.html" role="button">Confirmar</a>
+                    <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
               </div>
           </div>
+        </form>
           
       </div>
 
