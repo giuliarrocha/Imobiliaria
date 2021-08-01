@@ -1,16 +1,17 @@
 <?php
 
-
     // pega dados
     if(isset($_REQUEST['submit'])){
-        $inputCPF = $_REQUEST['inputC'];
-        $inputSexo = $_REQUEST['inputSexo'];
+        $inputCodigo = $_REQUEST['inputC'];
+        $inputTipo = $_REQUEST['inputTipo'];
         
-        $inputEmail = $_REQUEST['inputEmail'];
+        $inputAlugado = $_REQUEST['inputAlugado'];
 
         $inputRua = $_REQUEST['inputRua'];
         $inputNum = $_REQUEST['inputNum'];
         $inputBairro = $_REQUEST['inputBairro'];
+
+        $inputTamanho = $_REQUEST['inputTamanho'];
     }
 
     // prepara conexao
@@ -20,15 +21,15 @@
         echo mysqli_connect_error();
     }
 
-    $query = "UPDATE proprietario SET sexo='$inputSexo', email='$inputEmail', 
+    $query = "UPDATE imovel SET tipo='$inputTipo', alugado='$inputAlugado', 
      endBairro='$inputBairro', endRua='$inputRua',
-    endNum='$inputNum'
-    WHERE cpf = '$inputCPF'";
+    endNum='$inputNum', tamanho='$inputTamanho'
+    WHERE codigo = '$inputCodigo'";
     mysqli_query($conexao, $query) or die(mysql_error());
 
 
     $conexao->close();
-    header('Location: ../pagina_proprietario_editar.php?'.$inputCPF);
+    header('Location: ../pagina_imovel_editar.php?codigo='.$inputCodigo);
     exit;
     return;
 ?>

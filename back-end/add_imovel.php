@@ -22,7 +22,7 @@
 
 
         // cidade cep
-        $query = "INSERT INTO cep_cidadecliente (cep, cidade)
+        $query = "INSERT INTO CEP_CidadeImovel (cep, cidade)
          VALUES ('$inputCEP', '$inputCidade')";
         $result = mysqli_query($conexao, $query);
 
@@ -35,7 +35,7 @@
          echo $query;
         $result = mysqli_query($conexao, $query);
         
-        if($result) {
+        if($result && $cpfCorretor != '0') {
             // gerencia
             $query = "SELECT * FROM imovel ORDER BY codigo DESC";
             $result = mysqli_query($conexao, $query);

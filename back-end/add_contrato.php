@@ -56,7 +56,7 @@
         $conexao->close();
     }
 
-    header('Location: ../cadastro_imovel.php');
+    header('Location: ../cadastro_contrato.php');
     exit;
     return;
 ?>
