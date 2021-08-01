@@ -48,106 +48,81 @@
   
           <div class="card text-center">
               <div class="card-body">
-
-                    <div class="mb-3 row">
-                        <label for="inputNome" class="col-sm-1 col-form-label">Nome:</label>
-                        <div class="col">   
-                          <input type="nome" class="col-sm-1 form-control" id="inputNome" placeholder="Digite o nome completo">
-                        </div>
-                      </div>
-
-                    <div class="mb-3 row">
-                        <label for="inputCPF" class="col-sm-1 col-form-label">CPF:</label>
-                        <div class="col">
-                          <input type="CPF" class="form-control" id="inputCPF" placeholder="Digite o CPF">
-                        </div>
+                <div class="mb-3 row" style="margin-top: 20px;">
+                    <label for="inputProprietario" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Proprietário:</label>
+                    <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                    <datalist id="datalistOptions">
+                      <option value="João">
+                      <option value="44596357844">
+                    </datalist>
                     </div>
-
-
-                    <div class="row">
-                        <label for="inputSexo" class="col-sm-1 col-form-label">Sexo:</label>
-                        <div class="col-sm-2">
-                            <div class="input-group col-sm-6">
-                                <select class="col-sm-6 form-select" id="inputSexo">
-                                <option selected>Escolha...</option>
-                                <option value="1">M</option>
-                                <option value="2">F</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <label class="col-sm col-form-label" for="inputEstadoCivil">Estado civil:</label>
-                        <div class="col-sm-2">
-                            <div class="input-group col-sm-6">
-                                <select class="col-sm-6 form-select" id="inputEstadoCivil">
-                                <option selected>Escolha...</option>
-                                <option value="1">Solteiro(a)</option>
-                                <option value="2">Casado(a)</option>
-                                <option value="2">Viúvo(a)</option>
-                                <option value="2">Divorciado(a)</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <label for="inputDataNasc" class="col col-form-label text-start">Data de nascimento:</label>
-                        <div class="col text-start w-100">
-                          <input type="dataNasc" class="form-control" id="inputDataNasc" placeholder="00/00/0000">
-                        </div>
-                    </div>
-
+    
                     <div class="mb-3 row" style="margin-top: 20px;">
-                        <label for="inputEmail" class="col-sm-1 col-form-label">Email:</label>
-                        <div class="col-4">   
-                          <input type="email" class="col-sm-1 form-control" id="inputEmail" placeholder="exemplo@gmail.com">
-                        </div>
+                      <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Corretor:</label>
+                      <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                      <datalist id="datalistOptions">
+                        <option value="Nenhum">
+                        <option value="João">
+                        <option value="44596357844">
+                      </datalist>
+                      </div>
 
-                        <label for="inputTelefone1" class="col-sm col-form-label">Telefone 1:</label>
-                        <div class="col-sm">   
-                          <input type="telefone1" class="col-sm-1 form-control" id="inputTelefone1" placeholder="Insira o numero de telefone">
+                      <div class="mb-3 row" style="margin-top: 20px;">
+                        <label for="inputProprietario" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Imóvel:</label>
+                        <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                        <datalist id="datalistOptions">
+                          <option value="João">
+                          <option value="44596357844">
+                        </datalist>
                         </div>
-                        <label for="inputTelefone2" class="col-sm col-form-label">Telefone 2:</label>
-                        <div class="col-sm w-100">   
-                          <input type="telefone2" class="col-sm-1 form-control" id="inputTelefone2" placeholder="Insira o numero de telefone">
+        
+                        <div class="mb-3 row" style="margin-top: 20px;">
+                          <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Cliente:</label>
+                          <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                          <datalist id="datalistOptions">
+                            <option value="Nenhum">
+                            <option value="João">
+                            <option value="44596357844">
+                          </datalist>
+                          </div>
+
+                    <div class="mb-3 row">
+                        <label for="inputVencimento" class="col-sm-1 col-form-label">Venc.:</label>
+                        <div class="col-sm-3">   
+                          <input type="vencimento" class="col-sm-1 form-control" id="inputVencimento" placeholder="Digite o dia do vencimento (ex: 15)">
+                        </div>
+                        <label for="inputInicio" class="col-sm-1 col-form-label">Data Início:</label>
+                        <div class="col">   
+                          <input type="inicio" class="col-sm-1 form-control" id="inputInicio" placeholder="00/00/0000">
+                        </div>
+                        <label for="inputFinal" class="col-sm-1 col-form-label">Data Final:</label>
+                        <div class="col-sm-3">   
+                          <input type="final" class="col-sm-1 form-control" id="inputFinal" placeholder="00/00/0000"">
                         </div>
                       </div>
 
-
                     <div class="mb-3 row">
-                        <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
-                        <div class="col-sm-3">   
-                          <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Digite o nome da rua">
+                        <label for="inputValor" class="col-1 col-form-label text-start">Valor:</label>
+                        <div class="col-2">   
+                          <input type="Valor" class="col form-control" id="inputValor" placeholder="R$1.500,00">
                         </div>
-                        <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
-                        <div class="col">   
-                          <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="Digite o número da rua">
-                        </div>
-                        <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
-                        <div class="col-sm-3">   
-                          <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Digite o nome do bairro">
-                        </div>
-                      </div>
-
-                
-
-                    <div class="mb-3 row">
-                        <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
-                        <div class="col">   
-                          <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="Insira CEP válido: 12345-678">
-                        </div>
-                        <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
-                        <div class="col-sm-6">   
-                          <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Digite o nome da cidade">
+                        <label for="inputPagamento" class="col-2 col-form-label">Pagamento:</label>
+                        <div class="col-sm-4">   
+                            <div class="input-group col-sm-6">
+                                <select class="col-sm-6 form-select" id="inputPagamento">
+                                <option selected>Escolha...</option>
+                                <option value="1">Boleto Bancário</option>
+                                <option value="2">Cartão de crédito</option>
+                                <option value="2">Débito em conta</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                      <label for="inputsalario" class="col-sm-1 col-form-label">Salário:</label>
-                      <div class="col">   
-                        <input type="salario" class="col-sm-1 form-control" id="inputsalario" placeholder="Exemplo: 1253,22">
-                      </div>
-                      <label for="inputprofissao" class="col-2 col-form-label">Profissão:</label>
-                      <div class="col-sm-6">   
-                        <input type="profissao" class="col-sm-1 form-control" id="inputprofissao" placeholder="Digite a profissão">
+                      <label for="inputAvaliacao" class="col-2 col-form-label text-start">Avaliação Corretor:</label>
+                      <div class="col-4">   
+                        <input type="avaliacao" class="col-sm-1 form-control" id="inputAvaliacao" placeholder="0 a 10">
                       </div>
                   </div>
                     
