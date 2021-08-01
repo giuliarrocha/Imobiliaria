@@ -55,7 +55,7 @@
                         <div class="col">   
                           <input type="nome" class="col-sm-1 form-control" name="inputNome" id="inputNome" placeholder="Digite o nome completo">
                         </div>
-                      </div>
+                    </div>
 
                     <div class="mb-3 row">
                         <label for="inputCPF" class="col-sm-1 col-form-label">CPF:</label>
@@ -150,7 +150,7 @@
                       <div class="col-sm-6">   
                         <input type="profissao" class="col-sm-1 form-control" id="inputprofissao" name="inputprofissao" placeholder="Digite a profissão">
                       </div>
-                  </div>
+                    </div>
                     
                     <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
