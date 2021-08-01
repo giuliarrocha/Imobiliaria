@@ -46,91 +46,103 @@
               Cadastro de novo contrato
           </h1>
   
+          <form action="back-end/add_contrato.php" method="post">
           <div class="card text-center">
               <div class="card-body">
                 <div class="mb-3 row" style="margin-top: 20px;">
                     <label for="inputProprietario" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Proprietário:</label>
-                    <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                    <input class="form-control w-50"  name="inputProprietario" placeholder="Digite o CPF">
+                    <!--
                     <datalist id="datalistOptions">
                       <option value="João">
                       <option value="44596357844">
                     </datalist>
+                    -->
                     </div>
     
                     <div class="mb-3 row" style="margin-top: 20px;">
-                      <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Corretor:</label>
-                      <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
-                      <datalist id="datalistOptions">
-                        <option value="Nenhum">
-                        <option value="João">
-                        <option value="44596357844">
-                      </datalist>
-                      </div>
+                        <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Corretor:</label>
+                        <input class="form-control w-50"  name="inputCorretor" placeholder="Digite o CPF">
+                          <!--
+                        <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
+                        <datalist id="datalistOptions">
+                          <option value="Nenhum">
+                          <option value="João">
+                          <option value="44596357844">
+                        </datalist>
+                        -->
+                        </div>
 
                       <div class="mb-3 row" style="margin-top: 20px;">
-                        <label for="inputProprietario" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Imóvel:</label>
+                        <label for="" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Imóvel:</label>
+                        <input class="form-control w-50"  name="inputImovel" placeholder="Digite o código">
+                        <!--
                         <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
                         <datalist id="datalistOptions">
                           <option value="João">
                           <option value="44596357844">
                         </datalist>
+                        -->
                         </div>
         
                         <div class="mb-3 row" style="margin-top: 20px;">
-                          <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Cliente:</label>
+                            <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Cliente:</label>
+                            <input class="form-control w-50"  name="inputCliente" placeholder="Digite o CPF">
+                            <!--
                           <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
                           <datalist id="datalistOptions">
-                            <option value="Nenhum">
                             <option value="João">
                             <option value="44596357844">
                           </datalist>
+                          -->
                           </div>
 
                     <div class="mb-3 row">
                         <label for="inputVencimento" class="col-sm-1 col-form-label">Venc.:</label>
                         <div class="col-sm-3">   
-                          <input type="vencimento" class="col-sm-1 form-control" id="inputVencimento" placeholder="Digite o dia do vencimento (ex: 15)">
-                        </div>
-                        <label for="inputInicio" class="col-sm-1 col-form-label">Data Início:</label>
-                        <div class="col">   
-                          <input type="inicio" class="col-sm-1 form-control" id="inputInicio" placeholder="00/00/0000">
-                        </div>
-                        <label for="inputFinal" class="col-sm-1 col-form-label">Data Final:</label>
-                        <div class="col-sm-3">   
-                          <input type="final" class="col-sm-1 form-control" id="inputFinal" placeholder="00/00/0000"">
-                        </div>
+                            <input type="text" name="vencimento" class="col-sm-1 form-control" id="inputVencimento" placeholder="Digite o dia do vencimento (ex: 15)">
+                          </div>
+                          <label for="inputInicio" class="col-sm-1 col-form-label">Data Início:</label>
+                          <div class="col">   
+                            <input type="text" name="inicio" class="col-sm-1 form-control" id="inputInicio" placeholder="00/00/0000">
+                          </div>
+                          <label for="inputFinal" class="col-sm-1 col-form-label">Data Final:</label>
+                          <div class="col-sm-3">   
+                            <input type="text" name="final" class="col-sm-1 form-control" id="inputFinal" placeholder="00/00/0000"">
+                          </div>
                       </div>
 
                     <div class="mb-3 row">
                         <label for="inputValor" class="col-1 col-form-label text-start">Valor:</label>
                         <div class="col-2">   
-                          <input type="Valor" class="col form-control" id="inputValor" placeholder="R$1.500,00">
+                          <input type="text" class="col form-control" name="inputValor" id="inputValor" placeholder="R$1.500,00">
                         </div>
                         <label for="inputPagamento" class="col-2 col-form-label">Pagamento:</label>
                         <div class="col-sm-4">   
                             <div class="input-group col-sm-6">
-                                <select class="col-sm-6 form-select" id="inputPagamento">
-                                <option selected>Escolha...</option>
-                                <option value="1">Boleto Bancário</option>
-                                <option value="2">Cartão de crédito</option>
-                                <option value="2">Débito em conta</option>
-                                </select>
+                                <select class="col-sm-6 form-select" name="inputPagamento" id="inputPagamento">
+                                    <option selected>Escolha...</option>
+                                    <option value="Boleto Bancário">Boleto Bancário</option>
+                                    <option value="Cartão de crédito">Cartão de crédito</option>
+                                    <option value="Débito em conta">Débito em conta</option>
+                                    </select>
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                      <label for="inputAvaliacao" class="col-2 col-form-label text-start">Avaliação Corretor:</label>
-                      <div class="col-4">   
-                        <input type="avaliacao" class="col-sm-1 form-control" id="inputAvaliacao" placeholder="0 a 10">
-                      </div>
-                  </div>
+                        <label for="inputAvaliacao" class="col-2 col-form-label text-start">Avaliação Corretor:</label>
+                        <div class="col-4">   
+                          <input type="number" class="col-sm-1 form-control" name="inputAvaliacao" id="inputAvaliacao" placeholder="0 a 10">
+                        </div>
+                    </div>
                     
-                    <a class="btn text-white" style="background-color: #A55C55;" href="clientes.html" role="button">Confirmar</a>
+                   
+                  <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
-              </div>
-          </div>
-          
+                </div>
+            </div>
+          </form>
       </div>
 
       </div>

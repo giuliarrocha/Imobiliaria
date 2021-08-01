@@ -53,7 +53,7 @@
         $conexao->close();
     }
 
-    //header('Location: ../cadastro_imovel.php');
+    header('Location: ../cadastro_imovel.php');
     exit;
     return;
 ?>
