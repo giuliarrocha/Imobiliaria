@@ -64,12 +64,18 @@
             
             if($result) {
                 // telefones
-                $query = "INSERT INTO telefonecorretor (numero, cpfCorretor)
-                VALUES ('$inputTelefone1', '$inputCPF')";
-                mysqli_query($conexao, $query);
-                $query = "INSERT INTO telefonecorretor (numero, cpfCorretor)
-                VALUES ('$inputTelefone2', '$inputCPF')";
-                mysqli_query($conexao, $query);    
+                if($inputTelefone1 != '0') {
+                    $query = "INSERT INTO telefonecorretor (numero, cpfCorretor)
+                    VALUES ('$inputTelefone1', '$inputCPF')";
+                    mysqli_query($conexao, $query);
+                }
+                
+                if($inputTelefone2 != '0') {
+                    $query = "INSERT INTO telefonecorretor (numero, cpfCorretor)
+                    VALUES ('$inputTelefone2', '$inputCPF')";
+                    mysqli_query($conexao, $query);    
+                }
+                
             }
         }
         

@@ -53,12 +53,18 @@
         
         if($result) {
             // telefones
-            $query = "INSERT INTO telefonecliente (numero, cpfCliente)
-            VALUES ('$inputTelefone1', '$inputCPF')";
-            mysqli_query($conexao, $query);
-            $query = "INSERT INTO telefonecliente (numero, cpfCliente)
-            VALUES ('$inputTelefone2', '$inputCPF')";
-            mysqli_query($conexao, $query);    
+            if($inputTelefone1 != '0') {
+                $query = "INSERT INTO telefonecliente (numero, cpfCliente)
+                VALUES ('$inputTelefone1', '$inputCPF')";
+                mysqli_query($conexao, $query);
+            }
+            
+            if($inputTelefone2 != '0') {
+                $query = "INSERT INTO telefonecliente (numero, cpfCliente)
+                VALUES ('$inputTelefone2', '$inputCPF')";
+                mysqli_query($conexao, $query);    
+            }
+            
         }
         
         

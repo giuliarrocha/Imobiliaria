@@ -46,6 +46,7 @@
               Cadastro de novo imóvel
           </h1>
   
+          <form action="back-end/add_imovel.php" method="post">
           <div class="card text-center">
               <div class="card-body">
 
@@ -53,16 +54,16 @@
                   <label for="inputTipo" class="col-sm-1 col-form-label">Tipo:</label>
                   <div class="col-sm">
                       <div class="input-group col-sm-6">
-                          <select class="col-sm-6 form-select" id="inputTipo">
+                          <select class="col-sm-6 form-select" id="inputTipo" name="inputTipo">
                           <option selected>Escolha...</option>
-                          <option value="1">Casa Residencial</option>
-                          <option value="2">Kitnet</option>
-                          <option value="3">Apartamento</option>
-                          <option value="4">Sala comercial</option>
-                          <option value="5">Local comercial</option>
-                          <option value="6">Edícula</option>
-                          <option value="7">Cobertura</option>
-                          <option value="8">Galpão</option>
+                          <option value="Casa Residencial">Casa Residencial</option>
+                          <option value="Kitnet">Kitnet</option>
+                          <option value="Apartamento">Apartamento</option>
+                          <option value="Sala comercial">Sala comercial</option>
+                          <option value="Local comercial">Local comercial</option>
+                          <option value="Edícula">Edícula</option>
+                          <option value="Cobertura">Cobertura</option>
+                          <option value="Galpão">Galpão</option>
                           </select>
                       </div>
                   </div>
@@ -70,60 +71,69 @@
 
                 <div class="mb-3 row" style="margin-top: 20px;">
                 <label for="inputProprietario" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Proprietário:</label>
+                <input class="form-control w-50" name="cpfProprietario" placeholder="Digite o CPF">
+                <!--
                 <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
                 <datalist id="datalistOptions">
                   <option value="João">
                   <option value="44596357844">
                 </datalist>
+                -->
                 </div>
 
                 <div class="mb-3 row" style="margin-top: 20px;">
                   <label for="inputCorretor" class="col-sm-2 col-form-label text-start" style="margin-left: 10px;">Corretor:</label>
+                  <input class="form-control w-50" name="cpfCorretor" placeholder="Digite o CPF">
+                  <!--
                   <input class="form-control w-50" list="datalistOptions" id="exampleDataList" placeholder="Digite para pesquisar">
                   <datalist id="datalistOptions">
                     <option value="Nenhum">
                     <option value="João">
                     <option value="44596357844">
                   </datalist>
+                -->
                   </div>
 
-                <div class="mb-3 row" style="margin-top: 20px;">
-                  <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
-                  <div class="col-sm-3">   
-                    <input type="rua" class="col-sm-1 form-control" id="inputRua" placeholder="Digite o nome da rua">
-                  </div>
-                  <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
-                  <div class="col">   
-                    <input type="numero" class="col-sm-1 form-control" id="inputNum" placeholder="Digite o número da rua">
-                  </div>
-                  <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
-                  <div class="col-sm-3">   
-                    <input type="bairro" class="col-sm-1 form-control" id="inputBairro" placeholder="Digite o nome do bairro">
-                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputRua" class="col-sm-1 col-form-label">Rua:</label>
+                    <div class="col-sm-3">   
+                        <input type="rua" class="col-sm-1 form-control" id="inputRua" name="inputRua" placeholder="Digite o nome da rua">
+                    </div>
+                    <label for="inputNum" class="col-sm-1 col-form-label">Num:</label>
+                    <div class="col">   
+                        <input type="numero" class="col-sm-1 form-control" id="inputNum" name="inputNum" placeholder="Digite somente o número">
+                    </div>
+                    <label for="inputBairro" class="col-sm-1 col-form-label">Bairro:</label>
+                    <div class="col-sm-3">   
+                        <input type="bairro" class="col-sm-1 form-control" id="inputBairro" name="inputBairro" placeholder="Digite o nome do bairro">
+                    </div>
+                    </div>
+
+              
+            <div class="mb-3 row">
+                <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
+                <div class="col">   
+                    <input type="CEP" class="col-sm-1 form-control" id="inputCEP" name="inputCEP" placeholder="Insira somente os números, válido: 12345678">
                 </div>
+                <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
+                <div class="col-sm-6">   
+                    <input type="cidade" class="col-sm-1 form-control" id="inputCidade" name="inputCidade" placeholder="Digite o nome da cidade">
+                </div>
+            </div>
 
-              <div class="mb-3 row">
-                  <label for="inputCEP" class="col-sm-1 col-form-label">CEP:</label>
-                  <div class="col">   
-                    <input type="CEP" class="col-sm-1 form-control" id="inputCEP" placeholder="Insira CEP válido: 12345-678">
-                  </div>
-                  <label for="inputCidade" class="col-sm-1 col-form-label">Cidade:</label>
-                  <div class="col-sm-6">   
-                    <input type="cidade" class="col-sm-1 form-control" id="inputCidade" placeholder="Digite o nome da cidade">
-                  </div>
-              </div>
 
               <div class="mb-3 row">
                 <label for="inputTamanho" class="col-2 col-form-label text-start">Tamanho:</label>
                 <div class="col">   
-                  <input type="tam" class="col-sm-1 form-control" id="inputTamanho" placeholder="Insira o tamanho do imóvel (m²)">
+                  <input type="tam" class="col-sm-1 form-control" name="inputTamanho" id="inputTamanho" placeholder="Insira o tamanho do imóvel (m²)">
                 </div>
               </div>
-                    
-                <a class="btn text-white" style="background-color: #A55C55;" href="corretores.html" role="button">Confirmar</a>
+                   
+              <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
-              </div>
-          </div>
+            </div>
+            </div>
+            </form>
           
       </div>
 
