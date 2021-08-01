@@ -1,25 +1,17 @@
 <?php
 
-
     // pega dados
     if(isset($_REQUEST['submit'])){
         $inputCPF = $_REQUEST['inputC'];
         $inputSexo = $_REQUEST['inputSexo'];
-        $inputEstadoCivil = $_REQUEST['inputEstadoCivil'];
         
-        $inputDataNasc1 = str_replace("/", "-", $_POST["inputDataNasc"]);
-        $inputDataNasc =  date('Y-m-d', strtotime($inputDataNasc1));
-
         $inputEmail = $_REQUEST['inputEmail'];
 
-        $inputprofissao = $_REQUEST['inputProfissao'];
-        $inputsalario = $_REQUEST['inputSalario'];
-
-
-        $inputCEP = $_REQUEST['inputCEP'];
         $inputRua = $_REQUEST['inputRua'];
         $inputNum = $_REQUEST['inputNum'];
         $inputBairro = $_REQUEST['inputBairro'];
+
+        $inputSalario = $_REQUEST['inputSalario'];
     }
 
     // prepara conexao
@@ -29,16 +21,15 @@
         echo mysqli_connect_error();
     }
 
-    $query = "UPDATE cliente SET sexo='$inputSexo', dataNascimento='$inputDataNasc', email='$inputEmail', 
-    estadoCivil='$inputEstadoCivil', salario='$inputsalario',profissao='$inputprofissao',
+    $query = "UPDATE corretor SET sexo='$inputSexo', email='$inputEmail', 
      endBairro='$inputBairro', endRua='$inputRua',
-    endNum='$inputNum'
+    endNum='$inputNum', salario='$inputSalario'
     WHERE cpf = '$inputCPF'";
     mysqli_query($conexao, $query) or die(mysql_error());
 
 
     $conexao->close();
-    header('Location: ../pagina_cliente_editar.php'.$inputCPF);
+    header('Location: ../pagina_corretor_editar.php?cpf='.$inputCPF);
     exit;
     return;
 ?>

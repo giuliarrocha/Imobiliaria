@@ -1,5 +1,28 @@
 <!doctype html>
 <html lang="en">
+    <?php
+        if(!isset($_REQUEST['codigo'])) {
+            header('Location: index.php');
+            exit;
+            return;
+        } else {
+            // prepara conexao
+            $conexao = mysqli_connect("localhost","root","", "imobiliaria") or die("Erro");
+            
+            if($conexao) {
+                echo mysqli_connect_error();
+            }
+            $codigo = $_REQUEST['codigo'];
+            $query = "SELECT * FROM contrato WHERE codigo = '$codigo'";
+            $result = mysqli_query($conexao, $query) or die(mysql_error());
+
+            if(!($row = mysqli_fetch_array($result))){
+                header('Location: clientes.php');
+                exit;
+                return;
+            }
+        }
+    ?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -46,6 +69,7 @@
               Editar Contrato
           </h1>
   
+          <form action="back-end/atualizar_contrato.php" method="post">
           <div class="card text-center">
               <div class="card-body">
 
@@ -95,10 +119,13 @@
                       </div>
                   </div>
                     
-                <a class="btn text-white" style="background-color: #A55C55;" href="clientes.html" role="button">Salvar Alterações</a>
+                
+            <input type="text" class="d-none" name="inputC" value="'.$row['cpf'].'">             
+            <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
-              </div>
-          </div>
+            </div>
+            </div>
+            </form>
           
       </div>
 

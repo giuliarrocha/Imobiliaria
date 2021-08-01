@@ -1,5 +1,28 @@
 <!doctype html>
 <html lang="en">
+    <?php
+        if(!isset($_REQUEST['cpf'])) {
+            header('Location: index.php');
+            exit;
+            return;
+        } else {
+            // prepara conexao
+            $conexao = mysqli_connect("localhost","root","", "imobiliaria") or die("Erro");
+            
+            if($conexao) {
+                echo mysqli_connect_error();
+            }
+            $cpf = $_REQUEST['cpf'];
+            $query = "SELECT * FROM cliente WHERE cpf = '$cpf'";
+            $result = mysqli_query($conexao, $query) or die(mysql_error());
+
+            if(!($row = mysqli_fetch_array($result))){
+                header('Location: clientes.php');
+                exit;
+                return;
+            }
+        }
+    ?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -46,6 +69,7 @@
               Editar imóvel
           </h1>
   
+          <form action="back-end/atualizar_imovel.php" method="post">
           <div class="card text-center">
               <div class="card-body">
 
@@ -54,14 +78,14 @@
                   <div class="col-sm">
                       <div class="input-group col-sm-6">
                           <select class="col-sm-6 form-select" name="inputTipo" id="inputTipo">
-                          <option selected="1">Casa Residencial</option>
-                          <option value="2">Kitnet</option>
-                          <option value="3">Apartamento</option>
-                          <option value="4">Sala comercial</option>
-                          <option value="5">Local comercial</option>
-                          <option value="6">Edícula</option>
-                          <option value="7">Cobertura</option>
-                          <option value="8">Galpão</option>
+                          <option value="Casa Residencial">Casa Residencial</option>
+                          <option value="Kitnet">Kitnet</option>
+                          <option value="Apartamento">Apartamento</option>
+                          <option value="Sala comercial">Sala comercial</option>
+                          <option value="Local comercial">Local comercial</option>
+                          <option value="Edícula">Edícula</option>
+                          <option value="Cobertura">Cobertura</option>
+                          <option value="Galpão">Galpão</option>
                           </select>
                       </div>
                   </div>
@@ -76,7 +100,7 @@
                   <div class="input-group col-sm-3 w-25">
                     <select class="col-sm-3 form-select" id="inputAlugado">
                     <option selected="1">Sim</option>
-                    <option value="2">Não</option>
+                    <option value="0">Não</option>
                     </select>
                   </div>
                 </div>
@@ -113,9 +137,12 @@
                   <input type="text" class="col-sm-1 form-control" name="inputTamanho" id="inputTamanho" placeholder="400 m²">
                 </div>
               </div>
-              
-              <a class="btn text-white" style="background-color: #A55C55;" href="corretores.html" role="button">Salvar alterações</a>
+              <input type="text" class="d-none" name="inputC" value="'.$row['cpf'].'">             
+                    <button class="btn text-white" style="background-color: #A55C55;" type="submit" name="submit">Confirmar</button>
 
+</div>
+</div>
+</form>
       </div>
 
       </div>

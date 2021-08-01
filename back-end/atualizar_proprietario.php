@@ -5,18 +5,9 @@
     if(isset($_REQUEST['submit'])){
         $inputCPF = $_REQUEST['inputC'];
         $inputSexo = $_REQUEST['inputSexo'];
-        $inputEstadoCivil = $_REQUEST['inputEstadoCivil'];
         
-        $inputDataNasc1 = str_replace("/", "-", $_POST["inputDataNasc"]);
-        $inputDataNasc =  date('Y-m-d', strtotime($inputDataNasc1));
-
         $inputEmail = $_REQUEST['inputEmail'];
 
-        $inputprofissao = $_REQUEST['inputProfissao'];
-        $inputsalario = $_REQUEST['inputSalario'];
-
-
-        $inputCEP = $_REQUEST['inputCEP'];
         $inputRua = $_REQUEST['inputRua'];
         $inputNum = $_REQUEST['inputNum'];
         $inputBairro = $_REQUEST['inputBairro'];
@@ -29,8 +20,7 @@
         echo mysqli_connect_error();
     }
 
-    $query = "UPDATE cliente SET sexo='$inputSexo', dataNascimento='$inputDataNasc', email='$inputEmail', 
-    estadoCivil='$inputEstadoCivil', salario='$inputsalario',profissao='$inputprofissao',
+    $query = "UPDATE proprietario SET sexo='$inputSexo', email='$inputEmail', 
      endBairro='$inputBairro', endRua='$inputRua',
     endNum='$inputNum'
     WHERE cpf = '$inputCPF'";
@@ -38,7 +28,7 @@
 
 
     $conexao->close();
-    header('Location: ../pagina_cliente_editar.php'.$inputCPF);
+    header('Location: ../pagina_proprietario_editar.php'.$inputCPF);
     exit;
     return;
 ?>

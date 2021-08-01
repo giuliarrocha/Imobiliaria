@@ -102,10 +102,12 @@
                               if($row['sexo'] == 'M') {
                                 echo '<option selected value="M">M</option>';
                                 echo '<option value="F">F</option>';
-                              }                                  
-                                if($row['sexo'] == 'F') {
+                              } else if($row['sexo'] == 'F') {
                                     echo '<option value="M">M</option>';
                                     echo '<option selected value="F">F</option>';
+                                }else {
+                                    echo '<option value="M">M</option>
+                                    <option value="F">F</option>';
                                 }
                                     
                                 echo'
