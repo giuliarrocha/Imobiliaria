@@ -38,7 +38,7 @@
 
 
     $conexao->close();
-    header('Location: ../pagina_cliente_editar.php'.$inputCPF);
+    header('Location: ../pagina_cliente_editar.php?cpf='.$inputCPF);
     exit;
     return;
 ?>

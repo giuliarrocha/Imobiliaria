@@ -28,7 +28,7 @@
 
 
     $conexao->close();
-    header('Location: ../pagina_proprietario_editar.php?'.$inputCPF);
+    header('Location: ../pagina_proprietario_editar.php?cpf='.$inputCPF);
     exit;
     return;
 ?>
