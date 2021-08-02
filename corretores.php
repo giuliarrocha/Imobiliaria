@@ -137,7 +137,9 @@
                                     $query="SELECT * FROM corretor WHERE nome LIKE '%$busca%'";
                                     break;
                                 case '3':
-                                    $query="SELECT * FROM corretor WHERE dataNascimento LIKE '%$busca%'";
+                                    $dataNascimento1 = str_replace("/", "-", $busca);
+                                    $dataNascimento =  date('Y-m-d', strtotime($dataNascimento1));
+                                    $query="SELECT * FROM corretor WHERE dataNascimento='$dataNascimento'";
                                     break;
                                 case '4':
                                     $query="SELECT * FROM corretor WHERE cep LIKE '%$busca%'";
@@ -152,7 +154,10 @@
                                     $query="SELECT * FROM corretor WHERE email LIKE '%$busca%'";
                                     break;
                                 case '8':
-                                    $query="SELECT * FROM corretor WHERE dataContratacao='$busca' ";
+                                    
+                                    $dataContratacao1 = str_replace("/", "-", $busca);
+                                    $dataContratacao =  date('Y-m-d', strtotime($dataContratacao1));
+                                    $query="SELECT * FROM corretor WHERE dataContratacao='$dataContratacao' ";
                                     break;
                                 case '9':
                                     $query="SELECT * FROM corretor WHERE salario='$busca' ";

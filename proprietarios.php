@@ -134,7 +134,9 @@
                                     $query="SELECT * FROM proprietario WHERE sexo LIKE '%$busca%'";
                                     break;
                                 case '4':
-                                    $query="SELECT * FROM proprietario WHERE dataNascimento='$busca'";
+                                    $inputDataNasc1 = str_replace("/", "-", $busca);
+                                    $inputDataNasc =  date('Y-m-d', strtotime($inputDataNasc1));
+                                    $query="SELECT * FROM proprietario WHERE dataNascimento='$inputDataNasc'";
                                     break;
                                 case '5':
                                     $query="SELECT * FROM proprietario WHERE cep like '%$busca%' ";

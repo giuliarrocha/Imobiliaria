@@ -126,13 +126,22 @@
                                     $query="SELECT * FROM contrato ";
                                     break;
                                 case '1':
-                                    $query="SELECT * FROM contrato WHERE dataVencimento='$busca'";
+                                    
+                                    $dataVencimento1 = str_replace("/", "-", $busca);
+                                    $dataVencimento =  date('Y-m-d', strtotime($dataVencimento1));
+                                    $query="SELECT * FROM contrato WHERE dataVencimento='$dataVencimento'";
                                     break;
                                 case '2':
-                                    $query="SELECT * FROM contrato WHERE dataInicio='$busca'";
+                                    
+                                    $dataInicio1 = str_replace("/", "-", $busca);
+                                    $dataInicio =  date('Y-m-d', strtotime($dataInicio1));
+                                    $query="SELECT * FROM contrato WHERE dataInicio='$dataInicio'";
                                     break;
                                 case '3':
-                                    $query="SELECT * FROM contrato WHERE dataFinal='$busca'";
+                                    
+                                    $dataFinal1 = str_replace("/", "-", $busca);
+                                    $dataFinal =  date('Y-m-d', strtotime($dataFinal1));
+                                    $query="SELECT * FROM contrato WHERE dataFinal='$dataFinal'";
                                     break;
                                 case '4':
                                     $query="SELECT * FROM contrato WHERE codigoImovel='$busca'";

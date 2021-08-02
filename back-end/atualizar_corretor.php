@@ -11,24 +11,28 @@
         $inputNum = $_REQUEST['inputNum'];
         $inputBairro = $_REQUEST['inputBairro'];
 
+        $inputBonus = $_REQUEST['inputBonus'];
         $inputSalario = $_REQUEST['inputSalario'];
+
+        // prepara conexao
+        $conexao = mysqli_connect("localhost","root","", "imobiliaria") or die("Erro");
+        
+        echo $inputBonus;
+        if($conexao) {
+            echo mysqli_connect_error();
+        }
+
+        $query = "UPDATE corretor SET sexo='$inputSexo', email='$inputEmail', 
+        endBairro='$inputBairro', endRua='$inputRua',
+        endNum='$inputNum', salario='$inputSalario', bonus='$inputBonus' 
+        WHERE cpf = '$inputCPF'";
+        echo $query;
+        mysqli_query($conexao, $query) or die(mysql_error());
+
+
+        $conexao->close();
+        
     }
-
-    // prepara conexao
-    $conexao = mysqli_connect("localhost","root","", "imobiliaria") or die("Erro");
-    
-    if($conexao) {
-        echo mysqli_connect_error();
-    }
-
-    $query = "UPDATE corretor SET sexo='$inputSexo', email='$inputEmail', 
-     endBairro='$inputBairro', endRua='$inputRua',
-    endNum='$inputNum', salario='$inputSalario'
-    WHERE cpf = '$inputCPF'";
-    mysqli_query($conexao, $query) or die(mysql_error());
-
-
-    $conexao->close();
     header('Location: ../pagina_corretor_editar.php?cpf='.$inputCPF);
     exit;
     return;

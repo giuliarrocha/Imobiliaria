@@ -187,7 +187,7 @@
                 </div>
                 <label for="inputBonus" class="col-sm-1 col-form-label">Bônus:</label>
                 <div class="col-sm-6">   
-                  <input type="text" class="col-sm-1 form-control" id="inputBonus" placeholder="Nenhum" value="'.$row['bonus'].'" readonly>
+                  <input type="text" class="col-sm-1 form-control" name="inputBonus" id="inputBonus" placeholder="Nenhum" value="'.$row['bonus'].'">
                 </div>
             </div>
 

@@ -132,16 +132,19 @@
                                     $query="SELECT * FROM cliente ";
                                     break;
                                 case '1':
-                                    $query="SELECT * FROM cliente WHERE cpf like '%$busca%'";
+                                    $query="SELECT * FROM cliente WHERE cpf='$busca'";
                                     break;
                                 case '2':
                                     $query="SELECT * FROM cliente WHERE nome LIKE '%$busca%'";
                                     break;
                                 case '3':
-                                    $query="SELECT * FROM cliente WHERE dataNascimento LIKE '%$busca%'";
+                                    
+                                    $inputDataNasc1 = str_replace("/", "-", $busca);
+                                    $inputDataNasc =  date('Y-m-d', strtotime($inputDataNasc1));
+                                    $query="SELECT * FROM cliente WHERE dataNascimento='$inputDataNasc'";
                                     break;
                                 case '4':
-                                    $query="SELECT * FROM cliente WHERE cep LIKE '%$busca%'";
+                                    $query="SELECT * FROM cliente WHERE cep='$busca'";
                                     break;
                                 case '5':
                                     $query="SELECT * FROM cliente WHERE endRua LIKE '%$busca%' OR endNum LIKE '%$busca%'";
@@ -159,7 +162,7 @@
                                     $query="SELECT * FROM cliente WHERE sexo like '%$busca%' ";
                                     break;
                                 case '10':
-                                    $query="SELECT * FROM cliente WHERE salario like '%$busca%'";
+                                    $query="SELECT * FROM cliente WHERE salario='$busca'";
                                     break;
                                 case '11':
                                     $query="SELECT * FROM cliente WHERE profissao like '%$busca%' ";
